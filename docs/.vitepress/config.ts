@@ -8,7 +8,7 @@ export default defineConfig({
     title: name,
     description,
     srcDir,
-    base: '/{repo}',
+    base: '/vue-directus',
     themeConfig: {
         repo: repository.url,
         editLinks: true,

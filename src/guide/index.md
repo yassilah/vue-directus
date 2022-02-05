@@ -5,7 +5,7 @@ This part describes what `example` does.
 ### Usage
 
 ```ts
-import { myExample } from "@package/name";
+import { myExample } from "vue-directus";
 
 const foo = myExample();
 ```
