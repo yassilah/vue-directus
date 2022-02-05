@@ -1,4 +1,4 @@
-# 📦 Library Name
+# 📦 vue-directus
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -6,13 +6,13 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> What is my library core function?
+> Use the [@directus/sdk](https://github.com/directus/directus#readme) in your next Vue 3 project.
 
 ## Features
 
-- 🔥 Feature 1
-- 🎉 Feature 2
-- 🚀 Feature 3
+- 🔥 Directus 9
+- 🎉 Vue 3
+- 🚀 Composables & middlewares
 - 😍 Typescript of course
 
 ## Installation
