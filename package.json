@@ -1,0 +1,67 @@
+{
+  "name": "@package/name",
+  "version": "0.0.0-development",
+  "description": "A library starter template.",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./utils": "./dist/utils.mjs"
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{username}/{repo}"
+  },
+  "scripts": {
+    "prepack": "unbuild",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "commit": "cz",
+    "commit:all": "git add . && cz",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@apenhet/eslint-config": "latest",
+    "c8": "^7.11.0",
+    "commitizen": "^4.2.4",
+    "cz-emoji": "^1.3.1",
+    "eslint": "latest",
+    "semantic-release": "^19.0.2",
+    "unbuild": "latest",
+    "vitepress": "^0.21.6",
+    "vitest": "latest"
+  },
+  "eslintConfig": {
+    "extends": "@apenhet",
+    "ignorePatterns": [
+      "!.vitepress"
+    ]
+  },
+  "unbuild": {
+    "declaration": true,
+    "entries": [
+      "./src/index"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
+  },
+  "release": {
+    "branches": [
+      "main",
+      "master"
+    ]
+  }
+}
