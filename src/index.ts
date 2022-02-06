@@ -3,6 +3,8 @@ import { Directus } from '@directus/sdk'
 import defu from 'defu'
 import type { TypeMapCollections, VueDirectusOptions } from './types'
 
+export * from './composables'
+
 export const directusKey: InjectionKey<Directus<TypeMapCollections>> =
     Symbol('directus')
 
