@@ -20,9 +20,9 @@
   },
   "scripts": {
     "prepack": "unbuild",
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "commit": "cz",
@@ -34,8 +34,8 @@
     "@vue/test-utils": "^2.0.0-rc.18",
     "c8": "^7.11.0",
     "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "latest",
-    "git-cz": "^4.8.0",
     "happy-dom": "^2.31.1",
     "semantic-release": "^19.0.2",
     "unbuild": "latest",
@@ -63,7 +63,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "git-cz"
+      "path": "cz-conventional-changelog"
     }
   },
   "release": {

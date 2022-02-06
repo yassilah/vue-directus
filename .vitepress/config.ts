@@ -1,15 +1,16 @@
 import { defineConfig } from 'vitepress'
-import { description, name, repository } from '../../package.json'
+import { description, name, repository } from '../package.json'
 import { join, resolve } from 'path'
 import { sync } from 'globby'
 
 const srcDir = resolve(__dirname, '../../src')
+const isProduction = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
     title: name,
     description,
     srcDir,
-    base: process.env.NODE_ENV === 'production' ? '/vue-directus' : '/',
+    base: isProduction ? '/vue-directus' : '/',
     themeConfig: {
         repo: repository.url,
         editLinks: true,
