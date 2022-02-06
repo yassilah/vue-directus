@@ -1,7 +1,13 @@
-import { expect, it, test } from 'vitest'
+import { Directus } from '@directus/sdk'
+import { describe, expect, it } from 'vitest'
+import { directusKey } from './index'
+import { useApp } from './utils/tests'
 
-test('basic test', () => {
-    it('should workd', () => {
-        expect(true).toBe(true)
+describe('installation', () => {
+    it('should install the plugin', () => {
+        const app = useApp()
+        const injection = app._context.provides[directusKey as any]
+        expect(injection).toBeInstanceOf(Directus)
+        expect(injection._url).toBe('http://localhost:8055')
     })
 })

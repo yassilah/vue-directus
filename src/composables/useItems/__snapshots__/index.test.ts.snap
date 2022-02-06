@@ -1,0 +1,38 @@
+// Vitest Snapshot v1
+
+exports[`useCollection > should have controls 1`] = `
+{
+  "createMany": [Function],
+  "createOne": [Function],
+  "deleteMany": [Function],
+  "deleteOne": [Function],
+  "errors": {
+    "createMany": null,
+    "createOne": null,
+    "deleteMany": null,
+    "deleteOne": null,
+    "fetch": null,
+    "updateMany": null,
+    "updateOne": null,
+  },
+  "fetch": [Function],
+  "items": RefImpl {
+    "__v_isRef": true,
+    "__v_isShallow": false,
+    "_rawValue": [],
+    "_value": [],
+    "dep": undefined,
+  },
+  "loading": {
+    "createMany": false,
+    "createOne": false,
+    "deleteMany": false,
+    "deleteOne": false,
+    "fetch": true,
+    "updateMany": false,
+    "updateOne": false,
+  },
+  "updateMany": [Function],
+  "updateOne": [Function],
+}
+`;

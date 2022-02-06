@@ -5,5 +5,5 @@
     "types": ["vitest"],
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "docs/.vitepress/**/*"]
+  "include": ["**/*", "src/**/*", "docs/.vitepress/**/*"]
 }
