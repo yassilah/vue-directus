@@ -39,8 +39,9 @@ function titleCase(str: string) {
 
 function buildSideBar(base: string) {
     return sync(join(srcDir, base, '*/*.md')).map(file => {
-        const text = titleCase(file.split('/').slice(0, -1).pop())
-        const link = `${base + text}/`
+        const name = file.split('/').slice(0, -1).pop()
+        const text = titleCase(name)
+        const link = `${base + name}/`
         const children = buildSideBar(link)
 
         return {
