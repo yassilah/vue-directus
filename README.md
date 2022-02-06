@@ -23,7 +23,7 @@ yarn add vue-directus # or npm install vue-directus
 
 ## Docs
 
-To learn more about this library, please check out our [docs](https://yassilah.github.io/vue-directus/)!
+To learn more about this library, please check out the [docs](https://yassilah.github.io/vue-directus/)!
 
 ## License
 
