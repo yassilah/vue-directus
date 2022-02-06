@@ -1,15 +1,16 @@
-import { App, InjectionKey } from 'vue'
 import { Directus } from '@directus/sdk'
+import { InjectionKey, Plugin } from 'vue'
 import defu from 'defu'
 import type { TypeMapCollections, VueDirectusOptions } from './types'
 
 export * from './composables'
+export * from './types'
 
 export const directusKey: InjectionKey<Directus<TypeMapCollections>> =
     Symbol('directus')
 
-export default {
-    install(app: App, options: Partial<VueDirectusOptions> = {}) {
+const plugin: Plugin = {
+    install(app, options: Partial<VueDirectusOptions> = {}) {
         const config = defu(options, {
             apiUrl: 'http://localhost:8055'
         })
@@ -19,3 +20,5 @@ export default {
         app.provide(directusKey, directus)
     }
 }
+
+export { plugin as default }

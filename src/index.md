@@ -69,6 +69,8 @@ This plugin is written entirely in TypeScript and makes it really easy to enjoy 
 
 ```ts
 // types.d.ts
+import "vue-directus";
+
 declare module "vue-directus" {
   interface Collections {
     articles: {
