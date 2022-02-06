@@ -1,7 +1,7 @@
 {
   "name": "vue-directus",
   "version": "0.0.0-development",
-  "description": "A library starter template.",
+  "description": "A Directus 9 plugin for Vue 3.",
   "license": "MIT",
   "exports": {
     ".": {
@@ -41,7 +41,8 @@
     "unbuild": "latest",
     "vitepress": "^0.21.6",
     "vitest": "latest",
-    "vue": "^3.2.29"
+    "vue": "^3.2.29",
+    "windicss": "^3.4.3"
   },
   "peerDependencies": {
     "vue": "^3.2.29"
@@ -78,6 +79,7 @@
   },
   "dependencies": {
     "@directus/sdk": "^9.5.1",
-    "defu": "^5.0.1"
+    "defu": "^5.0.1",
+    "vite-plugin-windicss": "^1.6.3"
   }
 }

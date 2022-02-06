@@ -1,15 +1,28 @@
 import { defineConfig } from 'vitepress'
+
 import { description, name, repository } from '../package.json'
 import { join, resolve } from 'path'
 import { sync } from 'globby'
+import WindiCSS from 'vite-plugin-windicss'
 
-const srcDir = resolve(__dirname, '../../src')
+const srcDir = resolve(__dirname, '../src')
 const isProduction = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
-    title: name,
     description,
     srcDir,
+    vite: {
+        plugins: [
+            WindiCSS({
+                config: {
+                    extract: {
+                        include: ['**/*.md', '**/*.vue']
+                    }
+                }
+            })
+        ]
+    },
+    title: name,
     base: isProduction ? '/vue-directus' : '/',
     themeConfig: {
         repo: repository.url,
